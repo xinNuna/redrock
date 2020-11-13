@@ -6,23 +6,43 @@ import java.util.Scanner;
 //    couple.fb(n) // 男/女朋友，帮我算算斐波那契数列第n项是多少？
 
     class BF {
-        public int factorial(int n) {
+        private int n;           //阶乘
+        private int a;            //求和
+        private int f;              //斐波那契
+
+        public int getN() {
+            return n;
+        }
+
+        public void setN(int n) {
             int result = 1;                                   //计算阶乘
             for (int i = 1; i < n; i++) {
                 result *= (i + 1);
+                this.n=result;
             }
-            return result;
         }
 
-        public int sum(int a) {                                 //累加求和
+
+        public int getA() {
+            return a;
+        }
+
+        public void setA(int a) {
+                                                        //累加求和
             int result = 0;
             int i = 1;
             result = (i + a) * a / 2;
-            return result;
+            this.a=result;
         }
 
-        public int fb(int f) {
-            int a = 0;
+
+
+        public int getF() {
+            return f;
+        }
+
+        public void setF(int f) {
+            int a = 1;
             int b = 1;
             int temp = 0;
 
@@ -30,8 +50,8 @@ import java.util.Scanner;
                 temp = a + b;
                 a = b;
                 b = temp;
+                this.f = b;
             }
-            return temp;
         }
 
      static class WAY{
@@ -42,22 +62,22 @@ import java.util.Scanner;
                 case 1:
                     System.out.print("男朋友，帮我计数，累加到");
                     int num2 = new Scanner(System.in).nextInt();
-                    couple.sum(num2);
-                    System.out.println("答案是：" + couple.sum(num2));
+                    couple.setA(num2);
+                    System.out.println("答案是：" + couple.getA());
                     System.out.println("欢迎下次再来哦~");
                     break;
                 case 2:
                     System.out.print("男朋友，帮我计算阶乘，算到");
                     int num1 = new Scanner(System.in).nextInt();
-                    couple.factorial(num1);
-                    System.out.println("答案是：" + couple.factorial(num1));
+                    couple.setN(num1);
+                    System.out.println("答案是：" + couple.getN());
                     System.out.println("欢迎下次再来哦~");
                     break;
                 case 3:
-                    System.out.println("男朋友，帮我算算斐波那契数列，算到项数为");
+                    System.out.print("男朋友，帮我算算斐波那契数列，算到项数为");
                     int num3 = new Scanner(System.in).nextInt();
-                    couple.fb(num3);
-                    System.out.println("答案是：" + couple.fb(num3));
+                    couple.setF(num3);
+                    System.out.println("答案是：" + couple.getF());
                     break;
                 default:
                     System.out.println("我是个铁five，我不会其他的orz");
