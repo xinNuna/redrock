@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -5,7 +6,7 @@ import java.util.Scanner;
 //    couple.getCount() // 男/女朋友，帮我看看计数到哪了？
 //    couple.fb(n) // 男/女朋友，帮我算算斐波那契数列第n项是多少？
 
-    class BF {
+class BF {
         private int n;           //阶乘
         private int a;            //求和
         private int f;              //斐波那契
@@ -58,32 +59,38 @@ import java.util.Scanner;
         public void means() {
             BF couple = new BF();
             int method = new Scanner(System.in).nextInt();
-            switch (method) {
-                case 1:
-                    System.out.print("男朋友，帮我计数，累加到");
-                    int num2 = new Scanner(System.in).nextInt();
-                    couple.setA(num2);
-                    System.out.println("答案是：" + couple.getA());
-                    System.out.println("欢迎下次再来哦~");
-                    break;
-                case 2:
-                    System.out.print("男朋友，帮我计算阶乘，算到");
-                    int num1 = new Scanner(System.in).nextInt();
-                    couple.setN(num1);
-                    System.out.println("答案是：" + couple.getN());
-                    System.out.println("欢迎下次再来哦~");
-                    break;
-                case 3:
-                    System.out.print("男朋友，帮我算算斐波那契数列，算到项数为");
-                    int num3 = new Scanner(System.in).nextInt();
-                    couple.setF(num3);
-                    System.out.println("答案是：" + couple.getF());
-                    break;
-                default:
-                    System.out.println("我是个铁five，我不会其他的orz");
+            try {
+                switch (method) {
+                    case 1:
+                        System.out.print("男朋友，帮我计数，累加到");
+                        int num2 = new Scanner(System.in).nextInt();
+                        couple.setA(num2);
+                        System.out.println("答案是：" + couple.getA());
+                        System.out.println("欢迎下次再来哦~");
+                        break;
+                    case 2:
+                        System.out.print("男朋友，帮我计算阶乘，算到");
+                        int num1 = new Scanner(System.in).nextInt();
+                        couple.setN(num1);
+                        System.out.println("答案是" + couple.getN()+"哦~");
+                        System.out.println("欢迎下次再来哦~");
+                        break;
+                    case 3:
+                        System.out.print("男朋友，帮我算算斐波那契数列，算到项数为");
+                        int num3 = new Scanner(System.in).nextInt();
+                        couple.setF(num3);
+                        System.out.println("答案是：" + couple.getF());
+                        break;
+                    default:
+                        System.out.println("我是个铁five，我不会其他的orz");
+                }
+            }
+            catch (InputMismatchException e){
+                System.out.println("项数过长，大脑报废啦！");
             }
         }
         }
+
     public static void main(String[] args) {
 
         System.out.println("感谢您点的虚拟男友哦，需要我干什么呢？");
