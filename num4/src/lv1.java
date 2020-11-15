@@ -47,21 +47,26 @@ class ToolsMan implements Compute {
 }
 
 class BF extends ToolsMan {
-    public void PrintSum(int num) {
-        System.out.print("男朋友，帮我计数，累加到" + num);
-        System.out.println("\n" + "答案是" + sum(num) + "哦~");
+    public void PrintSum() {
+
+        System.out.println("项数是：");
+        int num1 = new Scanner(System.in).nextInt();
+        System.out.print("男朋友，帮我计数，累加到" + num1);
+        System.out.println( "答案是" + sum(num1) + "哦~");
         System.out.println("欢迎下次再来哦~");
     }
 
-    public void PrintMul(int num) {
-        System.out.print("男朋友，帮我计算阶乘，算到" + num);
-        System.out.println("\n" + "答案是" + mul(num) + "哦~");
+    public void PrintMul() {
+        System.out.print("男朋友，帮我计算阶乘，算到" );
+        int num2 = new Scanner(System.in).nextInt();
+        System.out.println("答案是" + mul(num2) + "哦~");
         System.out.println("欢迎下次再来哦~");
     }
 
-    public void PrintFb(int num) {
-        System.out.print("男朋友，帮我算算斐波那契数列，算到项数为" + num);
-        System.out.println("\n" + "答案是" + fb(num) + "哦~");
+    public void PrintFb() {
+        System.out.print("男朋友，帮我算算斐波那契数列，算到项数为" );
+        int num3 = new Scanner(System.in).nextInt();
+        System.out.println( "答案是" + fb(num3) + "哦~");
         System.out.println("欢迎下次再来哦~");
     }
 }
@@ -73,18 +78,16 @@ public class lv1 {
         int method = new Scanner(System.in).nextInt();
         ToolsMan couple = new BF();
         BF bf = (BF) couple;
-        System.out.println("好的，说一下项数吧：");
-        int num = new Scanner(System.in).nextInt();
         try {
             switch (method) {
                 case 1:
-                    bf.PrintSum(num);
+                    bf.PrintSum();
                     break;
                 case 2:
-                    bf.PrintMul(num);
+                    bf.PrintMul();
                     break;
                 case 3:
-                    bf.PrintFb(num);
+                    bf.PrintFb();
                     break;
                 default:
                     System.out.println("我是个铁five，我不会其他的orz");
