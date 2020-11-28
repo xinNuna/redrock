@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp"
+        android:text="下一步"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/edit_text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="登录百度账号 精彩永相随"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@id/button_login"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:hint="请输入手机号/用户名/邮箱"
+        android:lines="2"
+        android:maxLength="30" />
+
+    <ImageButton
+        android:id="@+id/image_WeChat"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/button_login"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/wechat_bg" />
+
+    <ImageButton
+        android:id="@+id/image_QQ"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/button_login"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/image_WeChat"
+        android:background="@drawable/qq_bg" />
+
+    <ImageButton
+        android:id="@+id/image_Sina"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/button_login"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/image_WeChat"
+        android:background="@drawable/sina_bg" />
+
+    <Button
+        android:id="@+id/sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_toLeftOf="@id/line1"
+        android:background="@android:color/transparent"
+        android:text="注册"
+        android:textColor="#A4A4A4"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="35dp"
+        android:text="|"
+        android:textColor="#A4A4A4"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_toRightOf="@id/line1"
+        android:background="@android:color/transparent"
+        android:text="帮助"
+        android:textColor="#A4A4A4"
+        android:textSize="15dp" />
+
+
+</RelativeLayout>
