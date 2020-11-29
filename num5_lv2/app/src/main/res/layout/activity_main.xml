@@ -6,13 +6,24 @@
     <Button
         android:id="@+id/button_login"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="55dp"
         android:layout_centerInParent="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="30dp"
-        android:text="下一步"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp"
+        android:text="验证码登录"
         android:textSize="20dp" />
+    <Button
+        android:id="@+id/button_login2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_login"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:text="账号密码登录"
+        android:textColor="#424242"
+        android:textSize="13dp" />
+
 
     <TextView
         android:id="@+id/text_view"
@@ -25,19 +36,21 @@
         android:gravity="center"
         android:text="登录百度账号 精彩永相随"
         android:textColor="#000000"
-        android:textSize="30sp" />
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="45dp"
         android:layout_above="@id/button_login"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="10dp"
-        android:hint="请输入手机号/用户名/邮箱"
-        android:lines="2"
-        android:maxLength="30" />
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="5dp"
+        android:hint="请输入手机号"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLength="30"
+        android:background="@drawable/bg_border" />
 
     <ImageButton
         android:id="@+id/image_WeChat"
@@ -79,7 +92,7 @@
         android:background="@android:color/transparent"
         android:text="注册"
         android:textColor="#A4A4A4"
-        android:textSize="15dp" />
+        android:textSize="13dp" />
 
     <TextView
         android:id="@+id/line1"
@@ -90,7 +103,7 @@
         android:layout_marginBottom="35dp"
         android:text="|"
         android:textColor="#A4A4A4"
-        android:textSize="15dp" />
+        android:textSize="13dp" />
 
     <Button
         android:id="@+id/help"
@@ -102,7 +115,7 @@
         android:background="@android:color/transparent"
         android:text="帮助"
         android:textColor="#A4A4A4"
-        android:textSize="15dp" />
+        android:textSize="13dp" />
 
 
 </RelativeLayout>

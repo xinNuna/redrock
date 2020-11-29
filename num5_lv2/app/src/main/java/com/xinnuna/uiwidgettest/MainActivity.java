@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -59,5 +60,17 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "有问题自己解决！", Toast.LENGTH_SHORT).show();
             }
         });
+        Button button7 = (Button) findViewById(R.id.button_login2);
+        button7.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity2.class);
+                EditText editText = (EditText) findViewById(R.id.edit_text);
+                String count = editText.getText().toString();
+                intent.putExtra("count",count);
+                startActivity(intent);
+            }
+        }));
+
     }
 }
